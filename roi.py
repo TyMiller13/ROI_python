@@ -77,3 +77,22 @@ Total Investment: ${self.investments:.2f}
 Return On Investments: {self.roi_percent:.2f}%
 """
         )
+
+def run_roi():
+    print("Welcome to your Return On Investment calculator, please enter all information needed, and we'll handle the number crunching!")
+    my_roi = ReturnOnInvestment()
+    print("="*100)
+    print("Let's go over your monthly income.")
+    my_roi.income()
+    print("Great! lets move onto expenses. Enter the amount to each expense.")
+    my_roi.expenses()
+    print("Calculating cash flow...")
+    time.sleep(2)
+    my_roi.cashflow()
+    print("Just a few more questions! enter the amount. ")
+    my_roi.cash_on_cash_roi()
+    print("Loading your results!")
+    time.sleep(2)
+    my_roi.summary()
+
+run_roi()
